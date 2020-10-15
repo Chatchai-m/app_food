@@ -41,5 +41,18 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+    
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Food App request access to your location for Find latitude and longtitude</string>
+    <key>NSLocationAlwaysUsageDescription</key>
+    <string>Food App request access to your location for Find latitude and longtitude</string>
+    
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>This app require Photo for upload to Server</string>
+    <key>NSCameraUsageDescription</key>
+    <string>This app require Camera for upload to Server</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>This app require Microphone for upload to Server</string>
+    
 </dict>
 </plist>

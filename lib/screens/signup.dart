@@ -163,20 +163,22 @@ class _SignUpState extends State<SignUp> {
 
   Future<Null> checkUser() async {
     String url =
-        'http://192.168.2.34/getUserWhereUser.php?isAdd=true&User=$user';
+        'https://test.shopgiftstory.com/getUserWhereUser.php?isAdd=true&User=$user';
     try {
       Response response = await Dio().get(url);
+      print(response);
       if (response.toString() == 'null') {
         registerThread();
       } else {
-        normalDialog(context, 'User นี้ $user มีคนอื่นใช้ไปแล้ว กรุณาเปลี่ยน User ใหม่');
+        normalDialog(
+            context, 'User นี้ $user มีคนอื่นใช้ไปแล้ว กรุณาเปลี่ยน User ใหม่');
       }
     } catch (e) {}
   }
 
   Future<Null> registerThread() async {
     String url =
-        'http://192.168.2.34/addUser.php?isAdd=true&ChooseType=$chooseType&User=$user&Name=$name&Password=$password';
+        'https://test.shopgiftstory.com/addUser.php?isAdd=true&ChooseType=$chooseType&User=$user&Name=$name&Password=$password';
 
     try {
       print("M");

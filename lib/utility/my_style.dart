@@ -4,6 +4,12 @@ class MyStyle {
   Color darkColor = Colors.blue.shade900;
   Color primaryColor = Colors.green.shade600;
 
+  Widget showProgress() {
+    return Center(
+      child: CircularProgressIndicator(),
+    );
+  }
+
   TextStyle mainTtile = TextStyle(
       fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.purple);
 
