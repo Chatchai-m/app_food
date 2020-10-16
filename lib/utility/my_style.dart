@@ -11,12 +11,16 @@ class MyStyle {
   }
 
   TextStyle mainTtile = TextStyle(
-      fontSize: 18.0, fontWeight: FontWeight.bold, color: Colors.purple);
+    fontSize: 18.0,
+    fontWeight: FontWeight.bold,
+    color: Colors.purple,
+  );
 
   TextStyle mainH2Ttile = TextStyle(
-      fontSize: 16.0,
-      fontWeight: FontWeight.bold,
-      color: Colors.green.shade700);
+    fontSize: 16.0,
+    fontWeight: FontWeight.bold,
+    color: Colors.green.shade700,
+  );
 
   SizedBox mySizebox() => SizedBox(
         width: 8.0,
@@ -41,23 +45,26 @@ class MyStyle {
   Text showTitle(String title) => Text(
         title,
         style: TextStyle(
-            fontSize: 24.00,
-            color: Colors.blue.shade900,
-            fontWeight: FontWeight.bold),
+          fontSize: 24.00,
+          color: Colors.blue.shade900,
+          fontWeight: FontWeight.bold,
+        ),
       );
 
   Text showTitleH2(String title) => Text(
         title,
         style: TextStyle(
-            fontSize: 18.00,
-            color: Colors.blue.shade900,
-            fontWeight: FontWeight.bold),
+          fontSize: 18.00,
+          color: Colors.blue.shade900,
+          fontWeight: FontWeight.bold,
+        ),
       );
 
   BoxDecoration myBoxDecoration(String namePic) {
     return BoxDecoration(
-        image: DecorationImage(
-            image: AssetImage('images/$namePic'), fit: BoxFit.cover));
+      image: DecorationImage(
+          image: AssetImage('images/$namePic'), fit: BoxFit.cover),
+    );
   }
 
   Container showLogo() {
