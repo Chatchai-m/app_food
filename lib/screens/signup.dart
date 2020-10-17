@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:qbmatic/utility/my_constant.dart';
 import 'package:qbmatic/utility/my_style.dart';
 import 'package:qbmatic/utility/normal_dialog.dart';
 
@@ -163,7 +164,7 @@ class _SignUpState extends State<SignUp> {
 
   Future<Null> checkUser() async {
     String url =
-        'https://test.shopgiftstory.com/getUserWhereUser.php?isAdd=true&User=$user';
+        '${MyConstant().domain}/getUserWhereUser.php?isAdd=true&User=$user';
     try {
       Response response = await Dio().get(url);
       print(response);
@@ -178,7 +179,7 @@ class _SignUpState extends State<SignUp> {
 
   Future<Null> registerThread() async {
     String url =
-        'https://test.shopgiftstory.com/addUser.php?isAdd=true&ChooseType=$chooseType&User=$user&Name=$name&Password=$password';
+        '${MyConstant().domain}/addUser.php?isAdd=true&ChooseType=$chooseType&User=$user&Name=$name&Password=$password';
 
     try {
       print("M");

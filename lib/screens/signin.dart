@@ -6,6 +6,7 @@ import 'package:qbmatic/model/user_model.dart';
 import 'package:qbmatic/screens/main_rider.dart';
 import 'package:qbmatic/screens/main_shop.dart';
 import 'package:qbmatic/screens/main_user.dart';
+import 'package:qbmatic/utility/my_constant.dart';
 import 'package:qbmatic/utility/my_style.dart';
 import 'package:qbmatic/utility/normal_dialog.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -75,7 +76,7 @@ class _SignInState extends State<SignIn> {
 
   Future<Null> checkAuthen() async {
     String url =
-        'https://test.shopgiftstory.com/getUserWhereUser.php?isAdd=true&User=$user';
+        '${MyConstant().domain}/getUserWhereUser.php?isAdd=true&User=$user';
     try {
       Response response = await Dio().get(url);
 
