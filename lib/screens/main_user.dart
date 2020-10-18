@@ -124,7 +124,7 @@ class _MainUserState extends State<MainUser> {
       accountName: Text(
         nameUser == null ? "Name Login" : nameUser,
         style: TextStyle(color: Colors.white),
-      ),
+      ), accountEmail: null,
       //accountEmail: Text(
       //  'Please Login',
       //  style: TextStyle(color: MyStyle().darkColor),
