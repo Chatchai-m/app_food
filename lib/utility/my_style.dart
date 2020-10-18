@@ -60,6 +60,15 @@ class MyStyle {
         ),
       );
 
+  Text showTitleH3(String title) => Text(
+        title,
+        style: TextStyle(
+          fontSize: 14.00,
+          color: Colors.blue.shade900,
+          fontWeight: FontWeight.bold,
+        ),
+      );
+
   BoxDecoration myBoxDecoration(String namePic) {
     return BoxDecoration(
       image: DecorationImage(
