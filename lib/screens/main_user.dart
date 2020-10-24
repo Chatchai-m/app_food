@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:qbmatic/screens/show_cart.dart';
 import 'package:qbmatic/utility/my_style.dart';
 import 'package:qbmatic/utility/signout_process.dart';
 import 'package:qbmatic/widget/show_list_shop_all.dart';
@@ -35,6 +36,7 @@ class _MainUserState extends State<MainUser> {
       appBar: AppBar(
         title: Text(nameUser == null ? 'Main User' : '$nameUser login'),
         actions: <Widget>[
+          MyStyle().iconShowCart(context),
           IconButton(
               icon: Icon(Icons.exit_to_app),
               onPressed: () {
@@ -55,6 +57,7 @@ class _MainUserState extends State<MainUser> {
               children: <Widget>[
                 showHead(),
                 meneListShop(),
+                menuCart(),
                 meneStatusFood(),
               ],
             ),
@@ -124,11 +127,27 @@ class _MainUserState extends State<MainUser> {
       accountName: Text(
         nameUser == null ? "Name Login" : nameUser,
         style: TextStyle(color: Colors.white),
-      ), accountEmail: null,
+      ),
+      accountEmail: null,
       //accountEmail: Text(
       //  'Please Login',
       //  style: TextStyle(color: MyStyle().darkColor),
       //),
+    );
+  }
+
+  Widget menuCart() {
+    return ListTile(
+      leading: Icon(Icons.add_shopping_cart),
+      title: Text("ตะกร้าของฉัน"),
+      subtitle: Text("รายละเอียดอาหารที่อยู่ในตะกร้า ยังไม่ได้ Order"),
+      onTap: () {
+        MaterialPageRoute route =
+            MaterialPageRoute(builder: (context) => ShowCart());
+
+        Navigator.pop(context);
+        Navigator.push(context, route);
+      },
     );
   }
 }

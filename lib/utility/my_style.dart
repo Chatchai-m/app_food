@@ -1,8 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:qbmatic/screens/show_cart.dart';
 
 class MyStyle {
   Color darkColor = Colors.blue.shade900;
   Color primaryColor = Colors.green.shade600;
+
+  Widget iconShowCart(BuildContext context) {
+    return IconButton(
+        icon: Icon(Icons.add_shopping_cart),
+        onPressed: () {
+          MaterialPageRoute route =
+              MaterialPageRoute(builder: (context) => ShowCart());
+
+          Navigator.push(context, route);
+        });
+  }
 
   Widget showProgress() {
     return Center(
@@ -65,6 +77,15 @@ class MyStyle {
         style: TextStyle(
           fontSize: 14.00,
           color: Colors.blue.shade900,
+          fontWeight: FontWeight.bold,
+        ),
+      );
+
+  Text showTitleH3Red(String title) => Text(
+        title,
+        style: TextStyle(
+          fontSize: 14.00,
+          color: Colors.red.shade900,
           fontWeight: FontWeight.bold,
         ),
       );

@@ -45,6 +45,7 @@ class _ShowShopFoodMenuState extends State<ShowShopFoodMenu> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: <Widget>[ MyStyle().iconShowCart(context) ],
         title: Text(userModel.nameShop),
       ),
       body: listWidgets.length == 0
