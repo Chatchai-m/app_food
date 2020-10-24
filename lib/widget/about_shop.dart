@@ -5,6 +5,7 @@ import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:intl/intl.dart';
 import 'package:location/location.dart';
 import 'package:qbmatic/model/user_model.dart';
+import 'package:qbmatic/utility/my_api.dart';
 import 'package:qbmatic/utility/my_constant.dart';
 import 'package:qbmatic/utility/my_style.dart';
 
@@ -42,37 +43,13 @@ class _AboutShopState extends State<AboutShop> {
       lng2 = double.parse(userModel.lng);
       print('lat1 = $lat1, lng1 =$lng1, lat2 = $lat2, lng2 = $lng2');
 
-      distance = calculateDistance(lat1, lng1, lat2, lng2);
+      distance = MyAPI().calculateDistance(lat1, lng1, lat2, lng2);
       var myFormat = NumberFormat('#0.0#', 'en_US');
       distanceString = myFormat.format(distance);
 
-      transport = calculateTransport(distance);
+      transport = MyAPI().calculateTransport(distance);
       print("distance = $distance, transport = $transport");
     });
-  }
-
-  int calculateTransport(double distance) {
-    int transport;
-    if (distance < 1.0) {
-      transport = 35;
-    } else {
-      transport = 35 + ((distance - 1).round() * 10);
-    }
-
-    return transport;
-  }
-
-  double calculateDistance(double lat1, double lng1, double lat2, double lng2) {
-    double distance = 0;
-
-    var p = 0.017453292519943295;
-    var c = cos;
-    var a = 0.5 -
-        c((lat2 - lat1) * p) / 2 +
-        c(lat1 * p) * c(lat2 * p) * (1 - c((lng2 - lng1) * p)) / 2;
-    distance = 12742 * asin(sqrt(a));
-
-    return distance;
   }
 
   Future<LocationData> findLocationData() async {
@@ -153,7 +130,7 @@ class _AboutShopState extends State<AboutShop> {
     }
 
     Set<Marker> mySet() {
-      return <Marker>[ userMarker(), shopMarker() ].toSet();
+      return <Marker>[userMarker(), shopMarker()].toSet();
     }
 
     return Container(
