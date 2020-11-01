@@ -6,6 +6,7 @@ import 'package:qbmatic/utility/my_constant.dart';
 import 'package:qbmatic/utility/my_style.dart';
 import 'package:qbmatic/utility/normal_dialog.dart';
 import 'package:qbmatic/utility/sqlite_helper.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:toast/toast.dart';
 
 class ShowCart extends StatefulWidget {
@@ -321,13 +322,18 @@ class _ShowCartState extends State<ShowCart> {
     String idRider = '';
     String status = 'PENDING';
 
+    SharedPreferences preferences = await SharedPreferences.getInstance();
+    String idUser = preferences.getString('id');
+    String nameUser = preferences.getString('Name');
+
     print("orderDateTime = ${orderDateTime}, idFood = ${idFood}");
     print(
         "nameFood = ${nameFood}, price = ${price}, amount = ${amount}, sum = ${sum}");
 
     String url = MyConstant().domain +
-        '/addOrder.php?isAdd=true&orderDateTime=$orderDateTime&idShop=$idShop&nameShop=$nameShop&distance=$distance&transport=$transport&idFood=$idFood&nameFood=$nameFood&price=$price&amount=$amount&sum=$sum&idRider=$idRider&status=$status';
+        '/addOrder.php?isAdd=true&orderDateTime=$orderDateTime&idUser=$idUser&nameUser=$nameUser&idShop=$idShop&nameShop=$nameShop&distance=$distance&transport=$transport&idFood=$idFood&nameFood=$nameFood&price=$price&amount=$amount&sum=$sum&idRider=$idRider&status=$status';
     await Dio().get(url).then((value) async {
+      print(value);
       if (value.toString() == 'true') {
         Toast.show(
           "Order completed",
