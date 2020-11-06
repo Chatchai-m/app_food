@@ -320,7 +320,7 @@ class _ShowCartState extends State<ShowCart> {
     String sum = sums.toString();
 
     String idRider = '';
-    String status = 'PENDING';
+    String status = 'UserOrder';
 
     SharedPreferences preferences = await SharedPreferences.getInstance();
     String idUser = preferences.getString('id');

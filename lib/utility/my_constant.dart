@@ -1,6 +1,5 @@
 class MyConstant {
-
-  String domain = 'https://test.shopgiftstory.com';
+  String domain = 'https://test.otoptown.com';
 
   MyConstant();
 }

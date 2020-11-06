@@ -95,7 +95,7 @@ class MyStyle {
         style: TextStyle(
           fontSize: 14.00,
           color: Colors.red.shade900,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.w600,
         ),
       );
 
@@ -104,7 +104,7 @@ class MyStyle {
         style: TextStyle(
           fontSize: 14.00,
           color: Colors.purple.shade700,
-          fontWeight: FontWeight.w500,
+          fontWeight: FontWeight.w600,
         ),
       );
 
