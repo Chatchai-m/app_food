@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "586165103959",
-    "firebase_url": "https://food-79e68.firebaseio.com",
-    "project_id": "food-79e68",
-    "storage_bucket": "food-79e68.appspot.com"
+    "project_number": "564435226816",
+    "firebase_url": "https://qbmfood.firebaseio.com",
+    "project_id": "qbmfood",
+    "storage_bucket": "qbmfood.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:586165103959:android:cf95d44b372d55b1606212",
+        "mobilesdk_app_id": "1:564435226816:android:d124eb5c963d84d0045d25",
         "android_client_info": {
           "package_name": "com.qbmatic.qbmatic"
         }
       },
       "oauth_client": [
         {
-          "client_id": "586165103959-70ppoj87ekbhnpgp9hfgdtc2lt5l199j.apps.googleusercontent.com",
+          "client_id": "564435226816-fh7ki1ca86ha18d971sr249qcrsf4php.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD3OK-uwIcM3ySu1tL_OAt8LG46cTd0c_k"
+          "current_key": "AIzaSyCGzczavNNrqBpqRG5_QlPHPZtSKmkKzeM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "586165103959-70ppoj87ekbhnpgp9hfgdtc2lt5l199j.apps.googleusercontent.com",
+              "client_id": "564435226816-fh7ki1ca86ha18d971sr249qcrsf4php.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

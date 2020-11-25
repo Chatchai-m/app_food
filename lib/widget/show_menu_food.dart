@@ -86,9 +86,15 @@ class _ShowMenuFoodState extends State<ShowMenuFood> {
                         children: <Widget>[
                           Row(
                             children: <Widget>[
-                              Text(
-                                foodModels[index].nameFood,
-                                style: MyStyle().mainTtile,
+                              Container(
+                                width: MediaQuery.of(context).size.width * 0.47,
+                                child: Text(
+                                  foodModels[index].nameFood,
+                                  maxLines: 1,
+                                  overflow: TextOverflow.ellipsis,
+                                  softWrap: false,
+                                  style: MyStyle().mainTtile,
+                                ),
                               ),
                             ],
                           ),
